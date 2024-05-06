@@ -1,0 +1,9 @@
+list_services
+list_methods calculator.Calculator
+describe_symbol calculator.Calculator.Add
+describe_symbol calculator.ArithmeticOpArguments
+describe_symbol calculator.Calculator.Avg
+describe_symbol calculator.AvgArithmeticOpArguments
+execute_method calculator.Calculator.Add {"arg1":2,"arg2":3}
+execute_method calculator.Calculator.Subtract {"arg1":2,"arg2":3}
+execute_method calculator.Calculator.Avg {"args":[1,10,20,30]}
