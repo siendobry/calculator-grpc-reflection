@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.calc.gen";
+option java_outer_classname = "CalculatorProto";
+
+package calculator;
+
+message ArithmeticOpArguments {
+  int32 arg1 = 1;
+  int32 arg2 = 2;
+}
+
+message ArithmeticOpResult {
+  int32 res = 1;
+}
+
+message AvgArithmeticOpArguments {
+  repeated double args = 1;
+}
+
+message AvgArithmeticOpResult {
+  double res = 1;
+}
+
+service Calculator {
+  rpc Add (ArithmeticOpArguments) returns (ArithmeticOpResult) {}
+  rpc Subtract (ArithmeticOpArguments) returns (ArithmeticOpResult) {}
+  rpc Avg (AvgArithmeticOpArguments) returns (AvgArithmeticOpResult) {}
+}
